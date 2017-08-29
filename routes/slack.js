@@ -3,8 +3,9 @@ const express = require('express');
 const router = express.Router();
 
 /* GET users listing. */
-router.get('/', (req, res) => {
-  res.send('respond with a resource');
+router.post('/', (req, res) => {
+  const challenge = req.body.challenge;
+  res.send(challenge);
 });
 
 module.exports = router;
